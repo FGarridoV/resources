@@ -1,50 +1,49 @@
 # Setting a Python developent environmet on macOS
 
-This instructions will guide you to properly install PyEnv on macOS. 
+This instructions will guide you to properly install PyEnv and PyEnv-VirtualEnv on macOS. PyEnv allows you to install and switch between multiple versions of Python. Combined with VirtualEnv you can manage Python environments from any of you installed Python versions. Then you can set any of your Python versions and enviroments easily and access them direclty (e.g., using Visual Studio Code).
 
-## Step 1: installing command line tools
+This tutorial has four sections:
+- Preparing the environment
+- Installing PyEnv
+- Installing PyEnv-VirtualEnv
+- Testing the installation and getting used
+  
+## Section 1: Preparing the environment
 
-Open a terminal window and run the folloing line:
-
+### 1. Installing command line tools
+This is a tool, developed by Apple, which install all the requierements and developer tools on mac. To install it, just open a new terminal window and run:
 ```terminal
 xcode-select --install
 ```
+The a window pop-up to confirm the installation. It will take time to finish depending on your internet connection.
 
-## Step 2: Install VSCode
+### 2. Installing Visual Studio Code (VSCode)
+Visual Studio Code is a powerful code editor. I strongly suggest to use it, but you can omit this step if you want to use another one. Just enter to [VSCode Download link](https://code.visualstudio.com/download) and follow the installation.
 
-1. Install VSCode from internet
-2. Install the following extension in VSCode
+### 3. Installing Python packages on VSCode
+Click on packages in the left side of VSCode and look for the following packages:
     - Python
     - Jupyter
 - Note: both installations will install more dependecies
 
-## Step 3: Installing homebrew
-(this is similar to apt in linux)
-Here is the source: https://brew.sh
-
-Open a terminal and run the following line:
-
+### 4. Installing Homebrew
+Homebrew is the easiest and most flexible way to install the UNIX tools Apple didn’t include with macOS. You can check the installation directly on [Homebrew webpage](https://brew.sh) or just run the following line on terminal.
 ```terminal
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-## Step 4: Installing PyEnv
+## Section 2: Installing PyEnv
 
-1. On a new terminal, run:
-
+### 1. Install PyEnv using brew
+Now we will use the recently installed homebrew, which comes with the brew command. In this case just run the following two commands one by one.
 ```terminal
 brew update
 ```
-
-2. Install pyenv running:
 ```terminal
 brew install pyenv
 ```
-
-## Step 5: Setting up PyEnv
-
+### 2. Setting up PyEnv
 Run the following commands one by one:
-
 ```terminal
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
 ```
@@ -58,7 +57,7 @@ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 brew install xz
 ``````
 
-## Step 6: Installing venv for pyenv
+## Section 3: Installing PyEnv-VirtualEnv
 
 Run on a terminal:
 
@@ -67,7 +66,8 @@ brew install pyenv-virtualenv
 ```
 Finally restart your computer.
 
-## Testing
+
+## Section 4: Testing the installation and getting used
 (I need to check if you will need an extra step)
 
 ### Installing a python version:
