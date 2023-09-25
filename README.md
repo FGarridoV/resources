@@ -1,5 +1,7 @@
 # Setting a Python developent environmet on macOS
 
+This instructions will guide you to properly install PyEnv on macOS. 
+
 ## Step 1: installing command line tools
 
 Open a terminal window and run the folloing line:
@@ -16,7 +18,7 @@ xcode-select --install
     - Jupyter
 - Note: both installations will install more dependecies
 
-## Step 3: Installing hombrew
+## Step 3: Installing homebrew
 (this is similar to apt in linux)
 Here is the source: https://brew.sh
 
